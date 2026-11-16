@@ -1079,4 +1079,14 @@ renderBowl();
 with open(f'{REP}/SupeRR_Selector_S2_Dashboard.html', 'w', encoding='utf-8') as f:
     f.write(dash_html)
 
-print("Generated Methodology Report HTML & Interactive Dashboard HTML successfully!")
+nav_links = (
+    '  <div style="margin-top:9px; display:flex; gap:10px; flex-wrap:wrap;">'
+    '<a href="./report/SupeRR_Selector_S2_Methodology_Report.html" target="_blank" style="color:#FFFFFF; background:rgba(255,255,255,0.16); padding:5px 12px; border-radius:6px; text-decoration:none; font-size:12px; font-weight:700; border:1px solid rgba(255,255,255,0.3);">Full Methodology Report (Web HTML)</a>'
+    '<a href="./report/SupeRR_Selector_S2_Methodology_Report.pdf" target="_blank" style="color:#131A40; background:#FDE047; padding:5px 12px; border-radius:6px; text-decoration:none; font-size:12px; font-weight:700;">Open 11-Page Submission PDF</a>'
+    '</div>\n</header>'
+)
+root_index = dash_html.replace('</header>', nav_links, 1)
+with open(r'C:\Users\valok\.gemini\antigravity\scratch\superr_selector_s2\index.html', 'w', encoding='utf-8') as f:
+    f.write(root_index)
+
+print("Generated Methodology Report HTML, Interactive Dashboard HTML & root index.html successfully!")
