@@ -1,0 +1,11 @@
+# Strictly exclude proprietary competition data pack per SupeRR Selector S2 rules
+data_pack/
+*.zip
+
+# Python & OS artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
